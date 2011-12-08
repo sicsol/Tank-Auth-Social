@@ -1,0 +1,11 @@
+REQUIREMENTS
+
+CodeIgniter Version 2.0+
+
+INSTALLATION
+
+1. Copy all the files over to your existing installation.
+2. Upload schema.sql to your database
+3. Modify settings in config/database.php
+4. Modify settings in config/tank_auth.php
+5. Modify settings in config/tank_auth_social.php
