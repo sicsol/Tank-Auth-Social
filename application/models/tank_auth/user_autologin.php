@@ -33,13 +33,10 @@ class User_Autologin extends CI_Model
 	 */
 	function get($user_id, $key)
 	{
-		$this->db->select($this->users_table_name.'.id');
-		$this->db->select($this->users_table_name.'.username');
-		$this->db->from($this->users_table_name);
 		$this->db->join($this->table_name, $this->table_name.'.user_id = '.$this->users_table_name.'.id');
 		$this->db->where($this->table_name.'.user_id', $user_id);
 		$this->db->where($this->table_name.'.key_id', $key);
-		$query = $this->db->get();
+		$query = $this->db->get($this->users_table_name);
 		if ($query->num_rows() == 1) return $query->row();
 		return NULL;
 	}
