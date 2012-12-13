@@ -615,6 +615,8 @@ class Tank_auth
 						// Login user
 						$this->ci->session->set_userdata(array(
 								'user_id'	=> $user->id,
+								'firstname'	=> $user->firstname,
+								'lastname'	=> $user->lastname,
 								'username'	=> $user->username,
 								'status'	=> STATUS_ACTIVATED,
 						));
